@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<dictionary xmlns:xi="http://www.w3.org/2003/XInclude" title="Desktop Goose Terminology">
+    <!--xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)" /-->
+    <suite name="Desktop Goose Suite" code="GooS" description="Desktop Goose Scripts">
+        <command name="collect meme" code="taskmeme" description="Brings up a window with a meme">
+            <cocoa class="CollectMemeCommand"/>
+            <direct-parameter optional="yes" description="URL or filesystem path of the meme to bring">
+                <type type="text"/>
+            </direct-parameter>
+            <parameter optional="yes" name="title" type="text" code="titl" description="Title of the window" />
+        </command>
+        <command name="collect note" code="tasknote" description="Brings up a window with a text note">
+            <cocoa class="CollectNoteCommand"/>
+            <direct-parameter optional="yes" description="Text on the note">
+                <type type="text"/>
+            </direct-parameter>
+            <parameter optional="yes" name="title" type="text" code="titl" description="Title of the window" />
+        </command>
+        <command name="nab mouse" code="taskmous" description="Nabs the mouse cursor">
+            <cocoa class="NabMouseCommand"/>
+        </command>
+        <command name="wander" code="taskwndr" description="Just wander around">
+            <cocoa class="WanderCommand"/>
+            <parameter optional="yes" name="duration" type="real" code="time" description="time to wander for" />
+        </command>
+        <command name="track mud" code="taskmuds" description="Go off screen and return with mud">
+            <cocoa class="TrackMudCommand"/>
+        </command>
+        <command name="collect donations" code="taskdon8" description="Bring in the donations window">
+            <cocoa class="CollectDonationsCommand"/>
+        </command>
+        <command name="honk" code="taskhonk" description="Honk">
+            <cocoa class="HonkCommand"/>
+        </command>
+        <command name="open memes folder" code="memeopen" description="Open the Memes folder in Finder">
+            <cocoa class="OpenMemesFolderCommand"/>
+        </command>
+        <command name="open notes folder" code="noteopen" description="Open the Notes folder in Finder">
+            <cocoa class="OpenNotesFolderCommand"/>
+        </command>
+    </suite>
+</dictionary>
