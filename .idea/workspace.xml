@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe173def-7aee-4570-91b5-31bd45a87f8e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Memes/meme1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memes/meme9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notes/note1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notes/note2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notes/note3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notes/note4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notes/note5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notes/note6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/net.namedfork.DesktopGoose.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
