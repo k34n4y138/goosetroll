@@ -3,9 +3,9 @@ import subprocess,sched, time,random, os, sys
 
 def job():
     procs = []
-    gcount = random.randint(1, 5)
+    gcount = random.randint(1, 3)
     for i in range(gcount):
-        procs.append(subprocess.Popen("desktopgoose.app/Contents/MacOS/Desktop\ Goose", shell=True))
+        procs.append(subprocess.Popen("desktopgoose.app/Contents/MacOS/Desktop\ Goose &> /dev/null", shell=True))
         time.sleep(10)
     time.sleep(120)
     [p.kill() for p in procs]
@@ -18,10 +18,10 @@ def daemonize():
     pid = os.fork()
     if pid > 0:
         sys.exit(0)
-    print(pid)
-    print(pid, "passed")
+
 
 def buildup():
+    print(os.path.abspath(__file__))
     if not os.path.exists(os.path.expanduser("~/Library/Containers/net.namedfork.DesktopGoose/Data/Library/Preferences/net.namedfork.DesktopGoose.plist")):
         if (os.path.exists("desktopgoose.app/Contents/Resources/Memes")):
             shutil.rmtree("desktopgoose.app/Contents/Resources/Memes")
@@ -34,13 +34,13 @@ def buildup():
             shutil.rmtree(os.path.expanduser("~/Library/Containers/net.namedfork.DesktopGoose"))
         except:
             pass
-        p = subprocess.Popen("desktopgoose.app/Contents/MacOS/Desktop\ Goose", shell=True)
+        p = subprocess.Popen("desktopgoose.app/Contents/MacOS/Desktop\ Goose &> /dev/null", shell=True)
         time.sleep(2)
         p.kill()
         shutil.copy("net.namedfork.DesktopGoose.plist", os.path.expanduser("~/Library/Containers/net.namedfork.DesktopGoose/Data/Library/Preferences"))
 
     while True:
-        interval = 1 * random.randint(1, 5) # in seconds
+        interval = 60 * 30 * random.randint(1, 5) # in seconds
         s.enter(interval, 1, job, ())
         s.run()
 
