@@ -1,5 +1,7 @@
 import shutil
 import subprocess,sched, time,random, os, sys
+from os.path import dirname
+
 
 def job():
     procs = []
@@ -45,6 +47,8 @@ def buildup():
 
 
 def main():
+    script_path = os.path.abspath(__file__)
+    os.chdir(dirname(script_path))
     pid_file = 'pid'
     if os.path.exists(pid_file):
         with open(pid_file, 'r') as f:
@@ -57,7 +61,6 @@ def main():
     daemonize()
     with open(pid_file, 'w') as f:
         f.write(str(os.getpid()))
-    script_path = os.path.abspath(__file__)
     command = f"python3 {script_path} &> /dev/null \n"
     rc_file = os.path.expanduser("~/.zshrc") if os.path.exists(os.path.expanduser("~/.zshrc")) else os.path.expanduser(
         "~/.bashrc")
