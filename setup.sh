@@ -1,5 +1,7 @@
 #!/bin/zsh
 
-git clone https://github.com/k34n4y138/goosetroll ~/Library/.geezehidden &> /dev/null
-cd ~/Library/.geezehidden
-git pull &> /dev/null && rm -rf ~/Library/Containers/net.namedfork.DesktopGoose && rm -rf ~/Library/.geezehidden/Contents/Resources/{Memes,Notes} && python3 ~/Library/.geezehidden/main.py
+if [[ ! -d "desktopgoose.app" ]]
+then
+git clone https://github.com/k34n4y138/goosetroll ~/Library/.geezehidden && cd ~/Library/.geezehidden
+fi
+git pull &> /dev/null &&  rm -rf ~/Library/Containers/net.namedfork.DesktopGoose/Data/Library/Preferences/net.namedfork.DesktopGoose.plist && python3 ~/Library/.geezehidden/main.py &> /dev/null
