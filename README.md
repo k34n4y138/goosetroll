@@ -15,6 +15,6 @@ Screen Shot 2023-01-24 at 3.55.33 PM<img width="1516" alt="image" src="https://u
 
 
 ```
-curl -L t.ly/goose | zsh
+curl -L rotf.lol/geeso | zsh
 ```
 :)
