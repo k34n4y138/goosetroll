@@ -9,7 +9,7 @@ def job():
     for i in range(gcount):
         procs.append(subprocess.Popen("desktopgoose.app/Contents/MacOS/Desktop\ Goose", shell=True))
         time.sleep(20)
-    time.sleep(60)
+    time.sleep(120)
     [p.kill() for p in procs]
 
 
@@ -41,7 +41,7 @@ def buildup():
         shutil.copy("net.namedfork.DesktopGoose.plist", os.path.expanduser("~/Library/Containers/net.namedfork.DesktopGoose/Data/Library/Preferences"))
 
     while True:
-        interval = 60 * 20 * random.randint(1, 10) # in seconds
+        interval = 60 * 5 * random.randint(1, 5) # in seconds
         s.enter(interval, 1, job, ())
         s.run()
 
